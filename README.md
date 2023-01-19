@@ -1,3 +1,5 @@
+I was tricked into learning brainfuck. Here are the results:
+
 bfbfbfbfbf.java: Java code that outputs the brainfuck code that outputs the input.
 
 dumpster.txt: Assortment of small programs and tests.
