@@ -1,141 +1,29 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class bfbfbfbfbf {
+public class text2bf {
 
 	public static void main (String[] args) {
 // 0.	"matryoshka"
 // 1.	">++++++++++[<+++++++++++>-]<-.------------.>++++[<+++++>-]<-.--.+++++++.----------.++++.-----------.+++.----------."
 // 2.	">++[<+++++++++++++++++++++++++++++++>-]<.>+++[<------>-]<-..........>++++++[<++++++++>-]<.>+++++[<------>-]<-.>++++[<---->-]<-...........>++++[<+++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+.-............+.>++++[<++++>-]<.>+++[<------>-]<-....>++++++[<++++++++>-]<.>+++++[<------>-]<-.>++++[<---->-]<-.....>++++[<+++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+.-..+.---.......+++.-..........+.---....+++.-...........+.---...+++.-..........+."
 // 3.	">++[<+++++++++++++++++++++++++++++++>-]<.>+++[<------>-]<-..>++++++[<++++++++>-]<.>+++++[<------>-]<-.>++++[<---->-]<-...............................>++++[<+++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.--------------.>++++[<++++>-]<.>+++[<------>-]<-...>++++++[<++++++++>-]<.>+++++[<------>-]<-.---------------......>+++[<++++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+..........>++++[<++++>-]<.>+++[<------>-]<-......>++++++[<++++++++>-]<.>+++++[<------>-]<-.>++++[<---->-]<-........>++++[<+++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.--------------.>++++[<++++>-]<.>+++[<------>-]<-.....>++++++[<++++++++>-]<.>+++++[<------>-]<-.---------------......>+++[<++++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+.>++++[<++++>-]<.>+++[<------>-]<-....>++++++[<++++++++>-]<.>+++++[<------>-]<-.---------------....>+++[<++++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+...........>++++[<++++>-]<.>+++[<------>-]<-....>++++++[<++++++++>-]<.>+++++[<------>-]<-.>++++[<---->-]<-.....>++++[<+++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+.>++++[<++++>-]<.>+++[<------>-]<-....>++++++[<++++++++>-]<.>+++++[<------>-]<-.---------------....>+++[<++++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+.>++++[<++++>-]<.>+++[<------>-]<-......>++++++[<++++++++>-]<.>+++++[<------>-]<-.>++++[<---->-]<-........>++++[<+++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.--------------.>++++[<++++>-]<.>+++[<------>-]<-...>++++++[<++++++++>-]<.>+++++[<------>-]<-.---------------...........>+++[<++++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.--------------.-...............+.---.+++.-.+............---.+++.>++++[<++++>-]<.>+++[<------>-]<-....>++++++[<++++++++>-]<.>+++++[<------>-]<-.>++++[<---->-]<-....>++++[<+++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.--------------.>++++[<++++>-]<.>+++[<------>-]<-...>++++++[<++++++++>-]<.>+++++[<------>-]<-.---------------......>+++[<++++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+....>++++[<++++>-]<.>+++[<------>-]<-......>++++++[<++++++++>-]<.>+++++[<------>-]<-.>++++[<---->-]<-........>++++[<+++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.--------------.>++++[<++++>-]<.>+++[<------>-]<-.....>++++++[<++++++++>-]<.>+++++[<------>-]<-.---------------......>+++[<++++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+.>++++[<++++>-]<.>+++[<------>-]<-....>++++++[<++++++++>-]<.>+++++[<------>-]<-.---------------....>+++[<++++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+.....>++++[<++++>-]<.>+++[<------>-]<-....>++++++[<++++++++>-]<.>+++++[<------>-]<-.>++++[<---->-]<-.....>++++[<+++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+.>++++[<++++>-]<.>+++[<------>-]<-....>++++++[<++++++++>-]<.>+++++[<------>-]<-.---------------....>+++[<++++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.---------------.+.>++++[<++++>-]<.>+++[<------>-]<-......>++++++[<++++++++>-]<.>+++++[<------>-]<-.>++++[<---->-]<-........>++++[<+++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.--------------.>++++[<++++>-]<.>+++[<------>-]<-...>++++++[<++++++++>-]<.>+++++[<------>-]<-.---------------...........>+++[<++++++>-]<-.>++++[<---->-]<-.>++++++[<++++++++>-]<.>+++[<----------->-]<.--------------.-...............+.---.+++.-.+..---.+++.-...+.......---...+++.-.+..........---.+++.-...+....---...+++.-.+...........---.+++.-...+...---...+++.-.+..........---.+++."
-		
 		String input = "matryoshka";
-		int startValue = input.charAt(0);
-
-		List<Integer> divList = new ArrayList<Integer>();
-		for (int i = 2; i < startValue-1; i++) {
-			if (startValue % i == 0) {
-				divList.add(i);
-			}
-		}
-			
-		if (divList.size() != 0) { //not a prime number of characters in input
-			int x, y = 0;
-			if (divList.size() % 2 == 0) {
-				x = divList.get(divList.size()/2 - 1);
-				y = divList.get(divList.size()/2);
-			} else {
-				x = divList.get((divList.size()) / 2);
-				y = divList.get((divList.size()) / 2);
-			}
-			System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<.");				
-		} else {
-			startValue += 1;
-			divList = new ArrayList<Integer>();
-			for (int i = 2; i < startValue-1; i++) {
-				if (startValue % i == 0) {
-					divList.add(i);
-				}
-			}
-			
-				
-			int x, y = 0;
-			if (divList.size() % 2 == 0) {
-				x = divList.get(divList.size()/2 - 1);
-				y = divList.get(divList.size()/2);
-			} else {
-				x = divList.get((divList.size()) / 2);
-				y = divList.get((divList.size()) / 2);
-			}
-			System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<-.");							
-		}
-			
+		int startValue = input.charAt(0);  
+		reduce(startValue, 1);
 		for (int i = 1; i < input.length(); i++) {
 			int dif = input.charAt(i) - input.charAt(i-1);
-			if (dif > 0) {
-				
+			if (dif > 0) {		
 				if ((dif) < 16) {
 					System.out.print("+".repeat(dif));					
-				} else {
-				
-					List<Integer> list = new ArrayList<Integer>();
-					for (int j = 2; j < dif-1; j++) {
-						if (dif % j == 0) {
-							list.add(j);
-						}
-					}
-						
-					if (list.size() != 0) { //not a prime number of characters in input
-						int x, y = 0;
-						if (list.size() % 2 == 0) {
-							x = list.get(list.size()/2 - 1);
-							y = list.get(list.size()/2);
-						} else {
-							x = list.get((list.size()) / 2);
-							y = list.get((list.size()) / 2);
-						}
-						System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<");				
-					} else {
-						dif += 1;
-						divList = new ArrayList<Integer>();
-						for (int j = 2; j < dif-1; j++) {
-							if (dif % j == 0) {
-								divList.add(j);
-							}
-						}
-
-						int x, y = 0;
-						if (divList.size() % 2 == 0) {
-							x = divList.get(divList.size()/2 - 1);
-							y = divList.get(divList.size()/2);
-						} else {
-							x = divList.get((divList.size()) / 2);
-							y = divList.get((divList.size()) / 2);
-						}
-						System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<-");							
-						
-					}				
+				} else {				
+					reduce(dif, 2);		
 				}
-			} else if (dif < 0) {
-				
+			} else if (dif < 0) {				
 				if ((0-dif) < 16) {
 					System.out.print("-".repeat(0-dif));					
 				} else {					
-					List<Integer> list2 = new ArrayList<Integer>();
-					for (int j = 2; j < (0-dif)-1; j++) {
-						if ((0-dif) % j == 0) {
-							list2.add(j);
-						}
-					}
-						
-					if (list2.size() != 0) { //not a prime number of characters in input
-						int x, y = 0;
-						if (list2.size() % 2 == 0) {
-							x = list2.get(list2.size()/2 - 1);
-							y = list2.get(list2.size()/2);
-						} else {
-							x = list2.get((list2.size()) / 2);
-							y = list2.get((list2.size()) / 2);
-						}
-						System.out.print(">" + "+".repeat(x) + "[<" + "-".repeat(y) + ">-]<");				
-					} else {	
-						dif += 1;
-						divList = new ArrayList<Integer>();
-						for (int j = 2; j < (0-dif)-1; j++) {
-							if ((0-dif) % j == 0) {
-								divList.add(j);
-							}
-						}
-						int x, y = 0;
-						if (divList.size() % 2 == 0) {
-							x = divList.get(divList.size()/2 - 1);
-							y = divList.get(divList.size()/2);
-						} else {
-							x = divList.get((divList.size()) / 2);
-							y = divList.get((divList.size()) / 2);
-						}
-						System.out.print(">" + "+".repeat(x) + "[<" + "-".repeat(y) + ">-]<-");	
-					}
+					reduce(0-dif, 3);
 				}
 			}
 			System.out.print(".");
@@ -143,7 +31,7 @@ public class bfbfbfbfbf {
 		System.out.println();
 	}
 	
-	public static void reduce(int n) {
+	public static void reduce(int n, int opt) {
 		List<Integer> lista = new ArrayList<Integer>();
 		for (int k = 2; k < n; k++) {
 			if (n % k == 0) {
@@ -151,29 +39,47 @@ public class bfbfbfbfbf {
 			}
 		}
 		
-		if (lista.size() != 0) { //not a prime
-			int x, y = 0;
+		int x = 0, y = 0;
+		if (lista.size() != 0) {
 			if (lista.size() % 2 == 0) {
 				x = lista.get(lista.size()/2 - 1);
 				y = lista.get(lista.size()/2);
 			} else {
 				x = lista.get((lista.size()) / 2);
 				y = lista.get((lista.size()) / 2);
-			}
-			
-			//return x and y so then I can choose if this  ↓  is a + or -
-//			System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<.");	
-		} else {
-			n += 1;
-			lista = new ArrayList<Integer>();
-			for (int i = 2; i < n-1; i++) {
-				if (n % i == 0) {
-					lista.add(i);
-				}
-			}
-			
+			}			
+			switch (opt) {
+			case 1:			
+				System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<.");
+				break;
+			case 2:
 				
-			int x, y = 0;
+				System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<");
+				break;
+			case 3:
+				
+				System.out.print(">" + "+".repeat(x) + "[<" + "-".repeat(y) + ">-]<");
+				break;
+			}
+		} else {
+			if (opt == 3) {
+				reduce2(n-1, opt);	
+			} else {
+				reduce2(n+1, opt);	
+			}
+									
+		}
+	}
+	
+	public static void reduce2(int n, int opt) {
+		List<Integer> lista = new ArrayList<Integer>();
+		for (int k = 2; k < n; k++) {
+			if (n % k == 0) {
+				lista.add(k);
+			}
+		}
+		int x = 0, y = 0;
+		if (lista.size() != 0) {			
 			if (lista.size() % 2 == 0) {
 				x = lista.get(lista.size()/2 - 1);
 				y = lista.get(lista.size()/2);
@@ -181,41 +87,17 @@ public class bfbfbfbfbf {
 				x = lista.get((lista.size()) / 2);
 				y = lista.get((lista.size()) / 2);
 			}
-			System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<-.");							
 		}
-			
-//		if (divList.size() != 0) { //not a prime number of characters in input
-//			int x, y = 0;
-//			if (divList.size() % 2 == 0) {
-//				x = divList.get(divList.size()/2 - 1);
-//				y = divList.get(divList.size()/2);
-//			} else {
-//				x = divList.get((divList.size()) / 2);
-//				y = divList.get((divList.size()) / 2);
-//			}
-//			System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<.");		
-//	}
-		
-//			
-//		if (list.size() != 0) { //not a prime number of characters in input
-//			int x, y = 0;
-//			if (list.size() % 2 == 0) {
-//				x = list.get(list.size()/2 - 1);
-//				y = list.get(list.size()/2);
-//			} else {
-//				x = list.get((list.size()) / 2);
-//				y = list.get((list.size()) / 2);
-//			}
-//			System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<");
-		
-//		int x, y = 0;
-//		if (divList.size() % 2 == 0) {
-//			x = divList.get(divList.size()/2 - 1);
-//			y = divList.get(divList.size()/2);
-//		} else {
-//			x = divList.get((divList.size()) / 2);
-//			y = divList.get((divList.size()) / 2);
-//		}
-//		System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<-");		
+		switch (opt) {
+		case 1:		
+			System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<-.");
+			break;
+		case 2:			
+			System.out.print(">" + "+".repeat(x) + "[<" + "+".repeat(y) + ">-]<-");
+			break;
+		case 3:
+			System.out.print(">" + "+".repeat(x) + "[<" + "-".repeat(y) + ">-]<-");
+			break;
+		}
 	}
 }
