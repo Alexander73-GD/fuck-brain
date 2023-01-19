@@ -1,4 +1,4 @@
-I was tricked into learning brainfuck. Here are the results:
+I was tricked into learning brainfuck. Here are the results until now:
 
 bfbfbfbfbf.java: Java code that outputs the brainfuck code that outputs the input.
 
