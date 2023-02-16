@@ -12,4 +12,13 @@ FACTORIAL
 >[-]<<[>>+<<-]>> clean a bit and move result 
 >] set pointer to if's start
 
-SUM ,[[>+>+<<-]>[<+>-]<-]
+
+INPUT VERSION WRITTEN LIKE FAC(n)
+>>>-<<  ,[>+[>  ]+[<]>    -[            >+
+[>      ]<  +[  <]      >-    ]>  [<      +>
+-]<-]>  >+>>[<  [>      [<    <+<+  >>    >-
+]<      <<  [>  >>      +<    <<    -]    >>
+-]      >[  -]  <<[>>+    <<  -]    >>  >]
+
+
+SUMMATION ,[[>+>+<<-]>[<+>-]<-]
