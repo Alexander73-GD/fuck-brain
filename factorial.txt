@@ -1,0 +1,15 @@
+FACTORIAL
+>>>-<< flags
++++++ n
+[
+>+[>]+[<]>- first iteration
+[>+[>]<+[<]>-] other iterations
+>[<+>-]<- n minus 1
+]
+>>+> removing flag
+>[< if there is another number to the right
+[>[<<+<+>>>-]<<<[>>>+<<<-]>>-] multiplication
+>[-]<<[>>+<<-]>> clean a bit and move result 
+>] set pointer to if's start
+
+SUM ,[[>+>+<<-]>[<+>-]<-]
