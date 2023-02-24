@@ -1,0 +1,28 @@
+First version. If you want the sequence to be readable you should use https://copy.sh/brainfuck/ with 8-bits cells.
+It's stored in a... uuuh... unconvetional way, click on "view memory" and you should see it.
+Don't ask me why is it the way it is.
+
+,
+[ START
+-
+[ NOT 1
+
+[>>>>+>>+<<<<<<-]>>>>+>>+
+[-[->]<]
+<<
+[ EVEN
+[>+<--]>
+[<<<<<+>>>>>>>>>>>+<<<<<<-]>>>>>>
+[ [>]+[<]>- [[>]<+[<]>-] ]
+>[>+<-]>[<+<<<<<<<<<<<<+>>>>>>>>>>>>>-]
+] EVEN
+>
+[ ODD
+[<+<+>>-]<<[<<+>>-]>[>+++<-]>+
+[>>>>>>>>+<<<<<<<<-]>>>>>>>>>>
+] ODD
+
+] NOT 1
+<<
+] END
+>>+
