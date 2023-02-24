@@ -1,3 +1,5 @@
+Note: there's no output, check the memory cells to see the result.
+
 FACTORIAL
 >>>-<< flags
 +++++ n
