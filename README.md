@@ -21,3 +21,6 @@ print(ASCII).txt: outputs the ASCII value of a character.
 text-to-bf.java: Java code that outputs the brainfuck code that outputs the input.
 
 various.txt: Assortment of small programs with comments.
+
+Important note: all of this is a personal project made for fun.
+It's not supposed to be useful nor good, this is simply someone who discovered brainfuck and started messing around with it.
