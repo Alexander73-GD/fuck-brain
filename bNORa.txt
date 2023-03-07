@@ -1,0 +1,32 @@
+Not about the NOR logic gate, the name is just some kind of pun.
+
+Two inputs, F and E, from 1 to 20.
+If F<15 OR E<13: result is negative ("NO")
+When F>15 and E>13:
+  If 13<=E<16: case 2
+  If E<=16: case 1
+
+->>,>+++++++++++++++ <[->-[>]<<] prepare & compare F to 15
+if F is (equal or) greater than 15 there will be something at the left
+<[ start F greater than 15
+
+[-]>>>>
+->>>,[<+>>>>+<<<-] make 2 copies of E & prepare
++++++++++++++ <[->-[>]<<] compare E to 13
+if E is (equal or) greater than 13 there will be something at the left 
+<[ start E greater than 13
+
+>>>>->>>++++++++++++++++ <[->-[>]<<] prepare & compare E to 15
+<[ start E greater than 16
+>>>>+++++++[<+++++++>-]<. print 1
+[-]>>]
+
+<[
+>>>>>+++++++[<+++++++>-]<+. print 2
+[-]>]
+
+] end of E greater than 13
+if E is less than 13: I have no idea but it works and that's cool
+
+] end of F greater than 15
+if F is less than 15: goto 4th cell & print NO < [>>>>>++++++[<+++++++++++++>-]<.+.[-]]
