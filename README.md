@@ -1,5 +1,7 @@
 I was tricked into learning brainfuck. Here are the results until now:
 
+bNORa.txt: Little program to do a personal thing, not about the NOR logic gate.
+
 collatz.txt: Collatz sequence.
 
 compare.txt: compares the value of 2 characters.
