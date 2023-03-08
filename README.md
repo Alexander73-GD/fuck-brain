@@ -18,6 +18,8 @@ fibonacci.txt: Fibonacci sequence.
 
 if-else.txt: My journey into writing my first program.
 
+logic.txt: Logic gates.
+
 print(ASCII).txt: outputs the ASCII value of a character.
 
 text-to-bf.java: Java code that outputs the brainfuck code that outputs the input.
