@@ -1,0 +1,49 @@
+a [GATE] b = c
+Final cells are:  a  b  0/1  0  0  0  0... unless yo do the following
+    You can start with -> and end with +[-<+]>>> to get to the cell with the result.
+    Then you just >++++++++[<++++++>-]<. to output it.
+
+Always starting with:
+,>,<
+
+AND
+[>[>+>]]
+
+NAND
+>>+<< [>[>->]]
+
+OR
+[>>+>]>[>+>]
+
+NOR
+>>+<< [>>->]>[>->]
+
+XOR
+>>>>>-<<<<<
+[>>+>]>[>+>]
+>[+<<<<[>-]]
+<[>>>>]
+>>[+<]
+>>[+<]
+
+XNOR
+>>>>>-<<<<<
+>>+<< [>>->]>[>->]
+>[>>>[+>>>>>>>>>]<<<<<<<[>+>]]
+>>[+>]>>[+>]
+<<<[+>]
+
+································································
+
+NOT
+,>+<[>-]
+
+································································
+
+Copy-paste this with some logic gate, input both 0/1 and run it.
+
+->
+,>,<
+{LOGIC GATE}
++[-<+]>>>
+>++++++++[<++++++>-]<.
