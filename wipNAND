@@ -1,0 +1,106 @@
+nand logic readable code (work in progress that I just want to save while it works)
+
+[Code written on https://copy.sh/brainfuck/, the memory cells may be a bit more readable there but it doesn't really matter.
+The memory cells are supposed to look like this:
+
+255  A   B   C   0  ... 254
+1st 2nd 3rd 4th 5th 6th ...
+
+where A and B are the inputs of the NAND, C is the output, and the ordinal numbers are where the outputs are stored.
+Ideally the first output will be stored in the 3rd position, the next one in the 4th, etc.]
+
+[Default code asks user for the first two inputs, A and B. This can be changed as explained in the code*]
+
+[By the way, these symbols, '>' and '<', are called 'single guillemet'. I will be abbreviating it as SG in the comments.]
+
+FIRST NAND OPERATION
+->>>>>>>>>>>--+[-<+]->>
+, (delete the comma to change the FIRSTinput to a 0 or change it for a plus sign to make it a 1)
+[<+>->>>>>>>>>>+<<<<<<<<<<]>
+, (delete the comma to change the SECOND input to a 0 or change it for a plus sign to make it a 1)
+[<+>->>>>>>>>>>+<<<<<<<<<<]+<<[>[>->]]+[-<+]->>>+++[++[-->++]--
+>>> (as many SG as the position where it will be stored)
+++[-<+]->>>-]
+
+PREPARATION FOR NEXT OPERATION
+[This will change the NAND inputs (1,2) to something else, which in this case is (1,3)]
+
+< (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+[-]
+> (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+++[-->++]--
+>>> (write as many SG as the number of the position where the new input is stored)
+[++[--<++]--<+>
+>>> (write as many SG as the number of the position where the new input is stored)
+-]++[--<++]--<[+[-<+]-
+>> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
++++[-->++]--
+>>> (write as many SG as the number of the position where the new input is stored)
++++[--<++]--<-]+[-<+]-
+>> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
+---++[-->++]--
+>>> (write as many SG as the number of the position where the new input is stored)
+---+[-<+]->
+
+SECOND NAND OPERATION
+>>+<<[>[>->]]+[-<+]->>>+++[++[-->++]--
+>>>> (as many SG as the position where it will be stored)
+++[-<+]->>>-]
+
+PREPARATION FOR NEXT OPERATION
+<<[-]>> delete a :::::
+++[-->++]-- >> go to saved 2nd  :::::
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+[ ++[--<++]--<+ (>>> go to 2nd)-] copying for transport (from {0 0 254 1st 2nd 3rd} to {0 2nd 254 1st 0 3rd})
+++[--<++]--
+//TODO: pasar de {0 2nd 254 1st 0 3rd} a {255 2nd 3rd 0 _____ 254 1st 2nd 3rd 0}
+<[ +[-<+]- (> 1 to get to a)+
+++[-->++]-- (>> 2 to get to 2nd)+
+++[--<++]-- <-]
+//
+|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
++[-<+]- (> 1 to get to a) :::::
+DO NOT substract 3 to get real value BECAUSE 2nd HAD NOT 3 ADDED
+++[-->++]-- (>>>> 4th)--- save at 4th real value
++[-<+]-> go back to a
+
+2 3
+>>+<<[>[>->]] NAND
++[-<+]->>> goto c
++++ add 3 to avoid 0s
+[ ++[-->++]-- (>>>>> 5th)+ +[-<+]- >>>-] get c to saved row :::::
+PREPARATION BELOW for 4 3 (then do 4 5)
+<<[-]>> delete a :::::
+++[-->++]-- >>>> go to saved 4th  :::::
+[ ++[--<++]--<+ (>>>>> go to 4th)-] copying for transport 
+++[--<++]--
+//
+<[ +[-<+]- (> 1 to get to a)+
+++[-->++]-- (>>>> 4 to get to 4th)+
+++[--<++]-- <-]
+//
++[-<+]- (> 1 to get to a) :::::
+DO NOT substract 3 to get real value BECAUSE 4th HAD NOT 3 ADDED (idk if something fails just substract those 3)
+++[-->++]-- (>>>>> 5th)--- save at 5th real value
+PREPARATION FOR 4 5 //TODO LO DE ABAJO de 4 3 a 4 5
++[-<+]->>> extra bit to get to c
+<[-]> delete b :::::
+++[-->++]-- >>>>> go to saved 5th  :::::
+[ ++[--<++]--<+ (>>>>>> go to 5th)-] copying for transport 
+++[--<++]--
+//
+<[ +[-<+]- (>> 2 to get to b)+
+++[-->++]-- (>>>>> 5 to get to 5th)+
+++[--<++]-- <-]
+//
++[-<+]- (>> 2 to get to b) :::::
+DO NOT substract 3 to get real value BECAUSE 4th HAD NOT 3 ADDED (idk if something fails just substract those 3)
+++[-->++]-- (>>>>>> 6th)--- save at 6th real value
+
+4 5
++[-<+]-> get back to a
+>>+<<[>[>->]] NAND
+
++[-<+]->>> final c
+>++++++++[<++++++>-]<.
