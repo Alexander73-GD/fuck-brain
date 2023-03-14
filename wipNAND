@@ -1,19 +1,31 @@
 nand logic readable code (work in progress that I just want to save while it works)
 
-[Code written on https://copy.sh/brainfuck/, the memory cells may be a bit more readable there but it doesn't really matter.
-The memory cells are supposed to look like this:
+[This code is intended to be useful for making logic gates using NAND logic (https://en.wikipedia.org/wiki/NAND_logic).
+The idea was to be able to "easily" change the inputs and outputs of a NAND given two initial inputs.
+
+Code written on https://copy.sh/brainfuck/, the memory cells may be a bit more readable there but it doesn't really matter.
+The memory cells are supposed to look something like this:
 
 255  A   B   C   0  ... 254
 1st 2nd 3rd 4th 5th 6th ...
 
 where A and B are the inputs of the NAND, C is the output, and the ordinal numbers are where the outputs are stored.
-Ideally the first output will be stored in the 3rd position, the next one in the 4th, etc.]
+Ideally the first output will be stored in the 3rd position, the next one in the 4th, etc.
+
+By the way, these symbols, '>' and '<', are called 'single guillemet'. I will be abbreviating < as L(eft)SG and > as R(ight)SG in the comments]
+
 
 [Default code asks user for the first two inputs, A and B. This can be changed as explained in the code*]
 
-[By the way, these symbols, '>' and '<', are called 'single guillemet'. I will be abbreviating it as SG in the comments.]
 
-FIRST NAND OPERATION (In this example: 1st⊕2nd)
+[The example in this code is an XOR gate made like 1st↑2nd=3rd, 1st↑3rd=4th, 2nd↑3rd=5th, 4th↑5th=6th]
+
+
+[Note: this idea with the code 'blocks' the user edits may not work if you need to replace both inputs (A and B) in the middle of the process and not at the end like in the example.
+Hopefully I've prepared everything correctly and it will still work, but brainfuck insists on destroying my hopes so who knows.]
+
+
+FIRST NAND OPERATION (In this example: 1st↑2nd=3rd)
 ->>>>>>>>>>>--+[-<+]->>
 , (delete the comma to change the FIRST input to a 0 or change it for a plus sign to make it a 1)
 [<+>->>>>>>>>>>+<<<<<<<<<<]>
@@ -22,98 +34,102 @@ FIRST NAND OPERATION (In this example: 1st⊕2nd)
 >>> (as many SG as the position where the output will be stored)
 ++[-<+]->>>-]
 
-PREPARATION FOR NEXT OPERATION (In this example: 1st⊕3rd)
-< (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+PREPARATION FOR NEXT OPERATION (In this example: 1st↑3rd)
+< (write TWO LSG if you'll replace the input A or ONE LSG if you'll replace B)
 [-]
-> (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+> (write TWO RSG if you'll replace the input A or ONE RSG if you'll replace B)
 ++[-->++]--
->>> (write as many SG as the number of the position where the new input is stored)
+>>> (write as many RSG as the number of the position where the new input is stored)
 [++[--<++]--<+>
->>> (write as many SG as the number of the position where the new input is stored)
+>>> (write as many RSG as the number of the position where the new input is stored)
 -]++[--<++]--<[+[-<+]-
->> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
+>> (write ONE RSG if you're replacing the value at A or TWO if you're replacing B)
 +++[-->++]--
->>> (write as many SG as the number of the position where the new input is stored)
+>>> (write as many RSG as the number of the position where the new input is stored)
 +++[--<++]--<-]+[-<+]-
->> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
+>> (write ONE RSG if you're replacing the value at A or TWO if you're replacing B)
 --- THIS RIGHT HERE IS THE ONLY DIFFERENCE BEWTEEN THE FIRST OPERATION AND THE REST OF THEM AND I KNOW I COULD REMOVE I SOME WAY BUT I HAVEN'T FOUND IT**
 ++[-->++]--
->>> (write as many SG as the number of the position where the last output was stored AAAAAAAAAAAAAAAAAAAAAAA idk why but I mean the one at line 20 which btw should be the 3rd one)
+>>> (write as many RSG as the number of the position where the last output was stored AAAAAAAAAAAAAAAAAAAAAAA idk why but I mean the one at line 20 which btw should be the 3rd one)
 ---
 
-SECOND NAND OPERATION (In this example: 1st⊕3rd=4th)
+SECOND NAND OPERATION (In this example: 1st↑3rd=4th)
 +[-<+]->>>+<<[>[>->]]+[-<+]->>>+++[++[-->++]--
->>>> (as many SG as the position where the output will be stored)
+>>>> (as many RSG as the position where the output will be stored)
 ++[-<+]->>>-]
 
-PREPARATION FOR NEXT OPERATION (In this example: 2nd⊕3rd)
-<< (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+PREPARATION FOR NEXT OPERATION (In this example: 2nd↑3rd)
+<< (write TWO LSG if you'll replace the input A or ONE LSG if you'll replace B)
 [-]
->> (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+>> (write TWO RSG if you'll replace the input A or ONE RSG if you'll replace B)
 ++[-->++]--
->> (write as many SG as the number of the position where the new input is stored)
+>> (write as many RSG as the number of the position where the new input is stored)
 [++[--<++]--<+>
->> (write as many SG as the number of the position where the new input is stored)
+>> (write as many RSG as the number of the position where the new input is stored)
 -]++[--<++]--<[+[-<+]-
-> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
+> (write ONE RSG if you're replacing the value at A or TWO if you're replacing B)
 +++[-->++]--
->> (write as many SG as the number of the position where the new input is stored)
+>> (write as many RSG as the number of the position where the new input is stored)
 +++[--<++]--<-]+[-<+]-
-> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
+> (write ONE RSG if you're replacing the value at A or TWO if you're replacing B)
 **HERE IN THE FIRST PART THERE ARE THREE MINUS SIGNS WHICH I DON'T EXACTLY KNOW YET WHY ARE NOT NEEDED HERE NOR HOW TO FIX THAT
 ++[-->++]--
->>>> (write as many SG as the number of the position where the output will be stored AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+>>>> (write as many RSG as the number of the position where the output will be stored AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
 ---
 
-
-THIRD NAND OPERATION (In this example: 2nd⊕3rd=5th)
+THIRD NAND OPERATION (In this example: 2nd↑3rd=5th)
 +[-<+]->>>+<<[>[>->]]+[-<+]->>>+++[++[-->++]--
->>>>> (as many SG as the position where the output will be stored)
+>>>>> (as many RSG as the position where the output will be stored)
 ++[-<+]->>>-]
 
-PREPARATION FOR NEXT OPERATION (In this example: 4th⊕5th)
-
-First part: (In this example: 4th⊕3rd)
-<< (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+PREPARATION FOR NEXT OPERATION (In this example: 4th↑5th)
+First part: (In this example: 4th↑3rd)
+<< (write TWO LSG if you'll replace the input A or ONE LSG if you'll replace B)
 [-]
->> (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+>> (write TWO RSG if you'll replace the input A or ONE RSG if you'll replace B)
 ++[-->++]--
->>>> (write as many SG as the number of the position where the new input is stored)
+>>>> (write as many RSG as the number of the position where the new input is stored)
 [ ++[--<++]--<+>
->>>> (write as many SG as the number of the position where the new input is stored)
+>>>> (write as many RSG as the number of the position where the new input is stored)
 -]++[--<++]--<[+[-<+]-
 > (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
 +++[-->++]--
->>>> (write as many SG as the number of the position where the new input is stored)
+>>>> (write as many RSG as the number of the position where the new input is stored)
 +++[--<++]--<-]+[-<+]-
 > (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
 **HERE IN THE FIRST PART THERE ARE THREE MINUS SIGNS WHICH I DON'T EXACTLY KNOW YET WHY ARE NOT NEEDED HERE NOR HOW TO FIX THAT
 ++[-->++]--
->>>>> (write as many SG as the number of the position where the output will be stored AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+>>>>> (write as many RSG as the number of the position where the output will be stored AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
 ---
 
-Second part: (In this example: 4th⊕5th)
-+[-<+]->>> extra bit to get to c
+FILLER OPERATION STARTS (In this example: 4th↑3rd=6th although 6 will be overwritten later)
++[-<+]->>>+<<[>[>->]]+[-<+]->>>+++[++[-->++]--
+>>>>>> (as many RSG as the position where the output will be stored)
+++[-<+]->>>-]
+FILLER OPERATION ENDS
 
-< (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+Second part: (In this example: 4th↑5th)
+< (write TWO LSG if you'll replace the input A or ONE LSG if you'll replace B)
 [-]
-> (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+> (write TWO RSG if you'll replace the input A or ONE RSG if you'll replace B)
 ++[-->++]--
 >>>>> (write as many SG as the number of the position where the new input is stored)
 [ ++[--<++]--<+>
 >>>>> (write as many SG as the number of the position where the new input is stored)
 -]++[--<++]--<[+[-<+]-
->> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
+>> (write ONE RSG if you're replacing the value at A or TWO if you're replacing B)
 +++[-->++]--
->>>>> (write as many SG as the number of the position where the new input is stored)
+>>>>> (write as many RSG as the number of the position where the new input is stored)
 +++[--<++]--<-]+[-<+]-
->> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
+>> (write ONE RSG if you're replacing the value at A or TWO if you're replacing B)
 **HERE IN THE FIRST PART THERE ARE THREE MINUS SIGNS WHICH I DON'T EXACTLY KNOW YET WHY ARE NOT NEEDED HERE NOR HOW TO FIX THAT
 ++[-->++]--
->>>>>> (write as many SG as the number of the position where the output will be stored AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+>>>>> (write as many RSG as the number of the position where the output will be stored AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+[-] THIS NEEDS TO BE ADDED ON THE SECOND PART OR AT LEAST I THINK SO
 ---
 
-
-FINAL NAND OPERATION AND OUTPUT RESULT (In this example: 4th⊕5th=6th)
+FINAL NAND OPERATION AND OUTPUT RESULT (In this example: 4th↑5th=6th)
 +[-<+]->>>+<<[>[>->]]+[-<+]->>> (here in memory is the final 0 or 1)
 >++++++++[<++++++>-]<. (and this just outputs it on screen)
+
+OPTIONAL: PRAY BEFORE EXECUTING TO WHATEVER GODS(S) YOU WANT
