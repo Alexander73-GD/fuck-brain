@@ -13,18 +13,16 @@ Ideally the first output will be stored in the 3rd position, the next one in the
 
 [By the way, these symbols, '>' and '<', are called 'single guillemet'. I will be abbreviating it as SG in the comments.]
 
-FIRST NAND OPERATION
+FIRST NAND OPERATION (In this example: 1st⊕2nd)
 ->>>>>>>>>>>--+[-<+]->>
-, (delete the comma to change the FIRSTinput to a 0 or change it for a plus sign to make it a 1)
+, (delete the comma to change the FIRST input to a 0 or change it for a plus sign to make it a 1)
 [<+>->>>>>>>>>>+<<<<<<<<<<]>
 , (delete the comma to change the SECOND input to a 0 or change it for a plus sign to make it a 1)
 [<+>->>>>>>>>>>+<<<<<<<<<<]+<<[>[>->]]+[-<+]->>>+++[++[-->++]--
->>> (as many SG as the position where it will be stored)
+>>> (as many SG as the position where the output will be stored)
 ++[-<+]->>>-]
 
-PREPARATION FOR NEXT OPERATION
-[This will change the NAND inputs (1,2) to something else, which in this case is (1,3)]
-
+PREPARATION FOR NEXT OPERATION (In this example: 1st⊕3rd)
 < (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
 [-]
 > (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
@@ -38,69 +36,84 @@ PREPARATION FOR NEXT OPERATION
 >>> (write as many SG as the number of the position where the new input is stored)
 +++[--<++]--<-]+[-<+]-
 >> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
----++[-->++]--
->>> (write as many SG as the number of the position where the new input is stored)
----+[-<+]->
+--- THIS RIGHT HERE IS THE ONLY DIFFERENCE BEWTEEN THE FIRST OPERATION AND THE REST OF THEM AND I KNOW I COULD REMOVE I SOME WAY BUT I HAVEN'T FOUND IT**
+++[-->++]--
+>>> (write as many SG as the number of the position where the last output was stored AAAAAAAAAAAAAAAAAAAAAAA idk why but I mean the one at line 20 which btw should be the 3rd one)
+---
 
-SECOND NAND OPERATION
->>+<<[>[>->]]+[-<+]->>>+++[++[-->++]--
->>>> (as many SG as the position where it will be stored)
+SECOND NAND OPERATION (In this example: 1st⊕3rd=4th)
++[-<+]->>>+<<[>[>->]]+[-<+]->>>+++[++[-->++]--
+>>>> (as many SG as the position where the output will be stored)
 ++[-<+]->>>-]
 
-PREPARATION FOR NEXT OPERATION
-<<[-]>> delete a :::::
-++[-->++]-- >> go to saved 2nd  :::::
-|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+PREPARATION FOR NEXT OPERATION (In this example: 2nd⊕3rd)
+<< (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+[-]
+>> (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+++[-->++]--
+>> (write as many SG as the number of the position where the new input is stored)
+[++[--<++]--<+>
+>> (write as many SG as the number of the position where the new input is stored)
+-]++[--<++]--<[+[-<+]-
+> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
++++[-->++]--
+>> (write as many SG as the number of the position where the new input is stored)
++++[--<++]--<-]+[-<+]-
+> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
+**HERE IN THE FIRST PART THERE ARE THREE MINUS SIGNS WHICH I DON'T EXACTLY KNOW YET WHY ARE NOT NEEDED HERE NOR HOW TO FIX THAT
+++[-->++]--
+>>>> (write as many SG as the number of the position where the output will be stored AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+---
 
-[ ++[--<++]--<+ (>>> go to 2nd)-] copying for transport (from {0 0 254 1st 2nd 3rd} to {0 2nd 254 1st 0 3rd})
-++[--<++]--
-//TODO: pasar de {0 2nd 254 1st 0 3rd} a {255 2nd 3rd 0 _____ 254 1st 2nd 3rd 0}
-<[ +[-<+]- (> 1 to get to a)+
-++[-->++]-- (>> 2 to get to 2nd)+
-++[--<++]-- <-]
-//
-|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-+[-<+]- (> 1 to get to a) :::::
-DO NOT substract 3 to get real value BECAUSE 2nd HAD NOT 3 ADDED
-++[-->++]-- (>>>> 4th)--- save at 4th real value
-+[-<+]-> go back to a
 
-2 3
->>+<<[>[>->]] NAND
-+[-<+]->>> goto c
-+++ add 3 to avoid 0s
-[ ++[-->++]-- (>>>>> 5th)+ +[-<+]- >>>-] get c to saved row :::::
-PREPARATION BELOW for 4 3 (then do 4 5)
-<<[-]>> delete a :::::
-++[-->++]-- >>>> go to saved 4th  :::::
-[ ++[--<++]--<+ (>>>>> go to 4th)-] copying for transport 
-++[--<++]--
-//
-<[ +[-<+]- (> 1 to get to a)+
-++[-->++]-- (>>>> 4 to get to 4th)+
-++[--<++]-- <-]
-//
-+[-<+]- (> 1 to get to a) :::::
-DO NOT substract 3 to get real value BECAUSE 4th HAD NOT 3 ADDED (idk if something fails just substract those 3)
-++[-->++]-- (>>>>> 5th)--- save at 5th real value
-PREPARATION FOR 4 5 //TODO LO DE ABAJO de 4 3 a 4 5
+THIRD NAND OPERATION (In this example: 2nd⊕3rd=5th)
++[-<+]->>>+<<[>[>->]]+[-<+]->>>+++[++[-->++]--
+>>>>> (as many SG as the position where the output will be stored)
+++[-<+]->>>-]
+
+PREPARATION FOR NEXT OPERATION (In this example: 4th⊕5th)
+
+First part: (In this example: 4th⊕3rd)
+<< (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+[-]
+>> (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+++[-->++]--
+>>>> (write as many SG as the number of the position where the new input is stored)
+[ ++[--<++]--<+>
+>>>> (write as many SG as the number of the position where the new input is stored)
+-]++[--<++]--<[+[-<+]-
+> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
++++[-->++]--
+>>>> (write as many SG as the number of the position where the new input is stored)
++++[--<++]--<-]+[-<+]-
+> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
+**HERE IN THE FIRST PART THERE ARE THREE MINUS SIGNS WHICH I DON'T EXACTLY KNOW YET WHY ARE NOT NEEDED HERE NOR HOW TO FIX THAT
+++[-->++]--
+>>>>> (write as many SG as the number of the position where the output will be stored AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+---
+
+Second part: (In this example: 4th⊕5th)
 +[-<+]->>> extra bit to get to c
-<[-]> delete b :::::
-++[-->++]-- >>>>> go to saved 5th  :::::
-[ ++[--<++]--<+ (>>>>>> go to 5th)-] copying for transport 
-++[--<++]--
-//
-<[ +[-<+]- (>> 2 to get to b)+
-++[-->++]-- (>>>>> 5 to get to 5th)+
-++[--<++]-- <-]
-//
-+[-<+]- (>> 2 to get to b) :::::
-DO NOT substract 3 to get real value BECAUSE 4th HAD NOT 3 ADDED (idk if something fails just substract those 3)
-++[-->++]-- (>>>>>> 6th)--- save at 6th real value
 
-4 5
-+[-<+]-> get back to a
->>+<<[>[>->]] NAND
+< (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+[-]
+> (write TWO SG if you'll replace the input A or ONE SG if you'll replace B)
+++[-->++]--
+>>>>> (write as many SG as the number of the position where the new input is stored)
+[ ++[--<++]--<+>
+>>>>> (write as many SG as the number of the position where the new input is stored)
+-]++[--<++]--<[+[-<+]-
+>> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
++++[-->++]--
+>>>>> (write as many SG as the number of the position where the new input is stored)
++++[--<++]--<-]+[-<+]-
+>> (write ONE SG if you're replacing the value at A or TWO if you're replacing B)
+**HERE IN THE FIRST PART THERE ARE THREE MINUS SIGNS WHICH I DON'T EXACTLY KNOW YET WHY ARE NOT NEEDED HERE NOR HOW TO FIX THAT
+++[-->++]--
+>>>>>> (write as many SG as the number of the position where the output will be stored AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA)
+---
 
-+[-<+]->>> final c
->++++++++[<++++++>-]<.
+
+FINAL NAND OPERATION AND OUTPUT RESULT (In this example: 4th⊕5th=6th)
++[-<+]->>>+<<[>[>->]]+[-<+]->>> (here in memory is the final 0 or 1)
+>++++++++[<++++++>-]<. (and this just outputs it on screen)
