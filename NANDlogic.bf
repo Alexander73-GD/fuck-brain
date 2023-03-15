@@ -169,7 +169,7 @@ NAND Operation & Storing Result (at 6th)
 · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · 
 
 
-NOR GATE
+XOR GATE
 ->>>>>>>>>>>-->,>,<<
  · · · · · · · · · · FIRST · · · · · · · · · · 
 Input Replacement ('1' 0)
