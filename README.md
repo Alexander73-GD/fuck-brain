@@ -1,6 +1,6 @@
 I was tricked into learning brainfuck. Here are the results until now:
 
-NANDlogic: template to make logic gates based on the NAND showed in logic.txt.
+NANDlogic (my best work): template to make logic gates based on the NAND showed in logic.txt.
 
 bNORa.txt: Little program to do a personal thing, not about the NOR logic gate.
 
