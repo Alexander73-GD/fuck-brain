@@ -38,6 +38,7 @@ The code shown here makes a NOR gate, following the steps below
 5 5 : 6   Last replacement and FOURTH operation
 
 Note: not all logic gates need intermediate steps always, because sometimes only one replacement is required between operations.
+HOWEVER, right now I haven't managed to avoid them, so you may need to replace a number by itself. Working on this.
 ]
 
 ->>>>>>>>>>>-->,>,<<
