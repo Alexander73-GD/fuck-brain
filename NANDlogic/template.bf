@@ -1,4 +1,8 @@
-->>>>>>>>>>>-->,>,<<
+->>>>>>>>>>>-->
+,   Input A
+>
+,   Input B
+<<
 
 · · · · · · · · · · · · · · · · · · · · · · · · · BLOCK START
 Input Replacement A
