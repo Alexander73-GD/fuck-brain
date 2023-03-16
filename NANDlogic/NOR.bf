@@ -35,7 +35,7 @@ Input Replacement ('1' 0)
 > {POSITION}
 -] ++[--<++]-- <[ ++[-->++]--
 > {POSITION}
-+ ++[--<++]-- < -]>
++ ++[--<++]-- <-]>
 
 Input Replacement (1 '1')
 > {POSITION}
@@ -43,7 +43,7 @@ Input Replacement (1 '1')
 > {POSITION}
 -] ++[--<++]-- <[ ++[-->++]--
 > {POSITION}
-+ ++[--<++]-- < -]>
++ ++[--<++]-- <-]>
 
 NAND Operation & Storing Result (at 3rd)
 +[-<+]-> >>+<<[>[>->]] +[-<+]- >>>[ ++[-->++]--
@@ -58,7 +58,7 @@ Input Replacement ('2' 2)
 >> {POSITION}
 -] ++[--<++]-- <[ ++[-->++]--
 >> {POSITION}
-+ ++[--<++]-- < -]>
++ ++[--<++]-- <-]>
 
 Input Replacement (2 '2')
 >> {POSITION}
@@ -66,7 +66,7 @@ Input Replacement (2 '2')
 >> {POSITION}
 -] ++[--<++]-- <[ ++[-->++]--
 >> {POSITION}
-+ ++[--<++]-- < -]>
++ ++[--<++]-- <-]>
 
 NAND Operation & Storing Result (at 4th)
 +[-<+]-> >>+<<[>[>->]] +[-<+]- >>>[ ++[-->++]--
@@ -81,7 +81,7 @@ Input Replacement ('3' 2)
 >>> {POSITION}
 -] ++[--<++]-- <[ ++[-->++]--
 >>> {POSITION}
-+ ++[--<++]-- < -]>
++ ++[--<++]-- <-]>
 
 Input Replacement (3 '4')
 >>>> {POSITION}
@@ -89,7 +89,7 @@ Input Replacement (3 '4')
 >>>> {POSITION}
 -] ++[--<++]-- <[ ++[-->++]--
 >>>> {POSITION}
-+ ++[--<++]-- < -]>
++ ++[--<++]-- <-]>
 
 NAND Operation & Storing Result (at 5th)
 +[-<+]-> >>+<<[>[>->]] +[-<+]- >>>[ ++[-->++]--
@@ -104,7 +104,7 @@ Input Replacement ('5' 4)
 >>>>> {POSITION}
 -] ++[--<++]-- <[ ++[-->++]--
 >>>>> {POSITION}
-+ ++[--<++]-- < -]>
++ ++[--<++]-- <-]>
 
 Input Replacement (5 '5')
 >>>>> {POSITION}
@@ -112,7 +112,7 @@ Input Replacement (5 '5')
 >>>>> {POSITION}
 -] ++[--<++]-- <[ ++[-->++]--
 >>>>> {POSITION}
-+ ++[--<++]-- < -]>
++ ++[--<++]-- <-]>
 
 NAND Operation & Storing Result (at 6th)
 +[-<+]-> >>+<<[>[>->]] +[-<+]- >>>[ ++[-->++]--
