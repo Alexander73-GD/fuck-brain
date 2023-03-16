@@ -8,13 +8,18 @@ STEPS
 0 0       Initial values at input cells (A and B)
 1 0       Replace A
 1 2       Replace B
-1 2 : 3   NAND Operation
+1 2 = 3   NAND Operation
 1 2
-1 3 : 4
+1 3
+1 3 = 4
 2 3
-2 3 : 5
+2 3
+2 3 = 5
 4 3
-4 5 : 6
+4 5
+4 5 = 6
+
+ · · · · · · · · · · SETUP · · · · · · · · · · 
 
 ->>>>>>>>>>>-->
 ,
