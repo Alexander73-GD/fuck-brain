@@ -4,6 +4,21 @@ NOR GATE
 3 4 = 5
 5 5 = 6
 
+STEPS
+0 0       Initial values at input cells (A and B)
+1 0       Replace A
+1 1       Replace B
+1 1 = 3   NAND Operation
+2 1       
+2 2
+2 2 = 4  
+3 2       
+3 4
+3 4 = 5   
+5 4       
+5 5
+5 5 = 6   
+
  · · · · · · · · · · SETUP · · · · · · · · · · 
  
 ->>>>>>>>>>>-->
