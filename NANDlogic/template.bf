@@ -21,7 +21,7 @@ Input Replacement B
 {POSITION}
 + ++[--<++]-- < -]>
 
-NAND Operation & Storing Result (at 6th)
+NAND Operation & Storing Result
 +[-<+]-> >>+<<[>[>->]] +[-<+]->>>
 [++[-->++]--
 {OUTPUT}
