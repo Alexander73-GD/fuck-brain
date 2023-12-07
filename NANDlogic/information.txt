@@ -1,5 +1,5 @@
 INSTRUCTIONS
-To make any gate, or any combination of NANDs, you first need some kind of diagram with the inputs and outputs needed (examples in NOT.bf and XOR.bf). After that, editing the code will be easier.
+To make any gate, or any combination of NANDs, you first need some kind of diagram with the inputs and outputs needed (examples in NOR.bf and XOR.bf). After that, editing the code will be easier.
 For each step, you'll be replacing the first input (A), then the second input (B) and finally storing the result (C) at some position in the SVR.
 Copy the template file where you want to, preferably a compiler. Copy and paste the "BLOCK" as many times as NAND operations you need.
 Every time you encounter curly brackets (braces) you'll have to add as many '>' symbols as the number indicated by the word.
@@ -9,7 +9,7 @@ There are 3 types of number depending of the word:
  - {OUTPUT} is the position of the cell in the SVR where the output of a NAND operation will be stored.
  - {FINAL OUTPUT} is the position of the cell in the SVR where the final output is stored.
 
-NOT.bf and XOR.bf are examples of possible combinations to help you understand the process. The text inside is executable, you can paste it in a compiler and it should work well. I hope they are self-explanatory enough so you can extrapolate them without problems.
+NOR.bf and XOR.bf are examples of possible combinations to help you understand the process. The text inside is executable, you can paste it in a compiler and it should work well. I hope they are self-explanatory enough so you can extrapolate them without problems.
 
 Note: the template has two commas at the beginning, which is how the input is entered. You have the option to remove them and change the inputs to 0 or replace them with a plus sign to get a 1. You can also delete the last line if you don't want the final result outputted on screen, the result will be in the SVR anyway.
   
